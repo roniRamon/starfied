@@ -48,6 +48,7 @@ input[type="submit"] {
   clear: both; }
 
 #game-canvas {
-  background-color: #C9CACB; }
+  background-image: url("../assets/images/backgrounds/space.jpg");
+  background-size: cover; }
 
 /*# sourceMappingURL=game.css.map */
