@@ -40,7 +40,7 @@ Sound controls mute, unmute.
 
 ###### Scripts involved in this project:
 *	`enemy.js`: this script will generate the enemies and there logic. (enemy class)
-*	p`layer.js`: this script will generate the player and his logic. ( player class)
+*	`player.js`: this script will generate the player and his logic. ( player class)
 *	`items.js`: this script will handle the items and the logic for the items. (item class)
 *	`board.js`: the script will generate the board and updating the elements.
 *	`game.js`: this script will keep track of the score, the levels and the logic of the rules.
@@ -56,17 +56,17 @@ reading:
 *	HTML5 audio tag
 * Setup the webpack and scss and Learn how to use canvas.
 
-** Day 1: **
+**Day 1:**
 Complete building the player class
 The enemy class and setup of the canvas
 
-** Day 2: **
+**Day 2:**
 Build level 1, game.js file and board.js file.
 
-** Day 3: **
+**Day 3:**
 	Complete building the item class and add music.
-  
-** Day 4: **
+
+**Day 4:**
 	Style the page: add instructions volume control and add link to my Github, Linkedin and facebook   
 
 #### Bonus features
