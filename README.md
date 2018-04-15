@@ -27,7 +27,7 @@ The player need to claim at least 80% of the canvas screen in order to pass to t
 Game controls start, pause and restart the game.
 Sound controls mute, unmute.
 
-![Wireframe num1 ](https://github.com/roniRamon/starfied/assets/doc/Starfied.png)
+![Wireframe num1 ](assets/doc/starfied.png)
 
 
 
