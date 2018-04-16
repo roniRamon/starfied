@@ -47,16 +47,29 @@ input[type="submit"] {
   display: block;
   clear: both; }
 
+html {
+  background-color: #D5D0DC; }
+
 main {
   width: 80%;
   margin: 0 auto; }
   main h1 {
     text-align: center;
     font-size: 30px; }
-  main #game-canvas {
+  main .player-background {
     background-image: url("../assets/images/backgrounds/space.jpg");
     background-size: cover;
+    position: relative;
+    width: 850px;
+    height: 550px;
+    margin: 0 auto;
+    z-index: 0; }
+  main #game-canvas {
+    background-color: white;
     display: block;
-    margin: 0 auto; }
+    top: 25px;
+    left: 25px;
+    z-index: 1;
+    position: absolute; }
 
 /*# sourceMappingURL=game.css.map */
