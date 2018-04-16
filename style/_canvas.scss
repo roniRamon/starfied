@@ -1,4 +1,16 @@
-#game-canvas {
-  background-image: url('../assets/images/backgrounds/space.jpg');
-  background-size: cover;
+main {
+  width: 80%;
+  margin: 0 auto;
+
+  h1 {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  #game-canvas {
+    background-image: url('../assets/images/backgrounds/space.jpg');
+    background-size: cover;
+    display: block;
+    margin: 0 auto;
+  }
 }

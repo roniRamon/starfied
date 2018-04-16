@@ -5,14 +5,14 @@
 A tribute to the game Volfied from 1989.
 [The game](https://www.youtube.com/watch?v=RxuMVqkLD7o)
 
-**The Story:** A space pilot won the space battle from the alien attack on his home plant Volfied. Now he is going to a galaxy far far away to protect other inhabitants home planets from the same alien attackers. 
+**The Story:** A space pilot won the space battle from the alien attack on his home plant Volfied. Now he is going to a galaxy far far away to protect other inhabitants home planets from the same alien attackers.
 
 A player controls a marker that can move around the edges of the rectangle. The objective is to claim at least 80% of a level's area to finish the level.
 
 Player can move using the keyboard arrows and SPACE to move to the enemy area.
 
 ### Functionality & MVP
-*	User can play 4-5 levels - start and pause the game.
+*	User can play 2-3 levels - start and pause the game.
 *	Move with the keyboard – left, right, up, down, space.
 *	Hear Music while playing and mute music.
 *	View his score and level.

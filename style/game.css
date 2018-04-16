@@ -47,8 +47,16 @@ input[type="submit"] {
   display: block;
   clear: both; }
 
-#game-canvas {
-  background-image: url("../assets/images/backgrounds/space.jpg");
-  background-size: cover; }
+main {
+  width: 80%;
+  margin: 0 auto; }
+  main h1 {
+    text-align: center;
+    font-size: 30px; }
+  main #game-canvas {
+    background-image: url("../assets/images/backgrounds/space.jpg");
+    background-size: cover;
+    display: block;
+    margin: 0 auto; }
 
 /*# sourceMappingURL=game.css.map */
