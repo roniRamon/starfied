@@ -56,20 +56,30 @@ main {
   main h1 {
     text-align: center;
     font-size: 30px; }
-  main .player-background {
-    background-image: url("../assets/images/backgrounds/space.jpg");
-    background-size: cover;
-    position: relative;
-    width: 850px;
-    height: 550px;
-    margin: 0 auto;
-    z-index: 0; }
-  main #game-canvas {
-    background-color: white;
-    display: block;
-    top: 25px;
-    left: 25px;
-    z-index: 1;
-    position: absolute; }
+  main #myBoard-div {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: 400px; }
+    main #myBoard-div ul {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 100%; }
+      main #myBoard-div ul li {
+        border-top: solid 1px black;
+        border-left: solid 1px black;
+        width: 100%;
+        height: 100%; }
+      main #myBoard-div ul li:last-child {
+        border-right: solid 1px black; }
+      main #myBoard-div ul .color-black {
+        background-color: black; }
+      main #myBoard-div ul .color-yellow {
+        background-color: yellow; }
+    main #myBoard-div ul:last-child li {
+      border-bottom: solid 1px black; }
+    main #myBoard-div .color-black {
+      background-color: black; }
 
 /*# sourceMappingURL=game.css.map */
