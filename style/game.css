@@ -77,6 +77,8 @@ main {
         background-color: black; }
       main #myBoard-div ul .color-yellow {
         background-color: yellow; }
+      main #myBoard-div ul li[alien="alien"] {
+        background-color: red; }
     main #myBoard-div ul:last-child li {
       border-bottom: solid 1px black; }
     main #myBoard-div .color-black {

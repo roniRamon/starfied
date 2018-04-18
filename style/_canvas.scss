@@ -43,6 +43,10 @@ main {
       .color-yellow {
         background-color: yellow;
       }
+
+      li[alien="alien"] {
+        background-color: red;
+      }
     }
 
       ul:last-child {
