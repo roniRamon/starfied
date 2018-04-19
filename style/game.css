@@ -59,8 +59,8 @@ main {
   main #myBoard-div {
     display: flex;
     flex-direction: column;
-    width: 800px;
-    height: 400px; }
+    width: 900px;
+    height: 500px; }
     main #myBoard-div ul {
       display: flex;
       flex-direction: row;
