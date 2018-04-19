@@ -36,11 +36,11 @@ main {
 
         }
 
-      .color-black {
+      li[color="black"] {
         background-color: black;
       }
 
-      .color-yellow {
+      li[color="yellow"] {
         background-color: yellow;
       }
 
