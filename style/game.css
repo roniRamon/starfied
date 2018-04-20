@@ -88,6 +88,11 @@ main {
     main #myBoard-div .color-black {
       background-color: #454B66; }
 
+#points-div {
+  color: white;
+  font-size: 18px;
+  margin-left: 30px; }
+
 nav {
   background-color: black;
   color: white;
@@ -107,20 +112,60 @@ nav {
     nav ul li a:hover {
       color: #DDDDDD; }
 
-.modal {
-  display: none;
+.rules, .winOrLose, .win {
   position: fixed;
-  left: 0;
   top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(221, 221, 221, 0.4);
   z-index: 3;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(221, 221, 221, 0.6); }
+  opacity: 0;
+  transition: opacity 400ms ease-in;
+  pointer-events: none; }
+  .rules div, .winOrLose div, .win div {
+    width: 500px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: white;
+    border: 1px solid #9F9AA4; }
+    .rules div .close, .winOrLose div .close, .win div .close {
+      background: #4381C1;
+      color: #FFFFFF;
+      line-height: 25px;
+      position: absolute;
+      right: 15px;
+      text-align: center;
+      width: 24px;
+      border-radius: 12px;
+      box-shadow: 1px 1px 3px #C9CACB; }
+    .rules div .close:hover, .winOrLose div .close:hover, .win div .close:hover {
+      background: #B3C5D7;
+      color: white; }
+    .rules div h2, .winOrLose div h2, .win div h2 {
+      text-align: center;
+      font-size: 30px;
+      color: #4381C1; }
+    .rules div #winOrLose-p, .winOrLose div #winOrLose-p, .win div #winOrLose-p {
+      text-align: center; }
+      .rules div #winOrLose-p button, .winOrLose div #winOrLose-p button, .win div #winOrLose-p button {
+        border: 1px solid #C9CACB;
+        border-radius: 5px;
+        padding: 7px 7px 5px 5px;
+        background-color: #B3C5D7; }
+      .rules div #winOrLose-p button:hover, .winOrLose div #winOrLose-p button:hover, .win div #winOrLose-p button:hover {
+        background-color: #C9CACB; }
+    .rules div p, .winOrLose div p, .win div p {
+      font-size: 18px; }
+      .rules div p img, .winOrLose div p img, .win div p img {
+        width: 200px;
+        margin: 0 auto; }
 
-#modal-for-game-rules {
-  background-color: #C9CACB;
-  width: 80%; }
-  #modal-for-game-rules .modal-content {
-    background-color: white; }
+.rules:target, .winOrLose:target,
+.win:target {
+  opacity: 1;
+  pointer-events: auto; }
 
 /*# sourceMappingURL=game.css.map */

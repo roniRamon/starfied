@@ -16,26 +16,65 @@
           <h1> Starfied </h1>
         <li>
         <li>
-          <button id="modal-rules" >Rules </button>
+          <a href="#rules" >Rules </a>
           <a href="https://www.linkedin.com/in/roni-ramon-69531410a/"><i class="fab fa-linkedin"></i></a>
           <a href="https://github.com/roniRamon"><i class="fab fa-github"></i></a>
         </li>
       </ul>
     </nav>
     <main>
+      <p id="points-div">
+        Score: 0%
+      </p>
       <div id="grid">
       </div>
     </main>
 
-    <div id="modal-for-game-rules" class="modal">
-      <div class="modal-content">
-        <span id="close">&times;</span>
-        <h3>Starfied Rules</h3>
-        <p>
+    <div id="rules" class="rules">
+    	<div>
+    		<a href="#close" title="Close" class="close">X</a>
+    		<h2>Starfied</h2>
+        <br>
+    		<p>
+          A space pilot won the space battle from the alien attack on his home plant Volfied. Now he is going to a galaxy far far away to protect other inhabitants home planets from the same alien attackers.<br><br>
 
+          A player controls a marker that can move around the edges of the rectangle. The objective is to claim at least 80% of a level's area to finish the level.<br><br>
+
+          Player can move using the keyboard arrows.<br><br>
+          <img src="assets/images/Keyboard_White_Arrows.png" />
         </p>
-      </div>
+    	</div>
     </div>
+
+      <div id="winOrLose" class="winOrLose">
+      	<div>
+      		<a href="#close" title="Close" class="close">X</a>
+      		<h2 id="header-h2-win">Game Over</h2>
+          <br>
+      		<p id="winOrLose-p">
+            You Lose!
+            <br>
+            <button id="winOrLose-button">
+              Start Over
+            </button>
+          </p>
+      	</div>
+      </div>
+
+      <div id="win" class="win">
+        <div>
+          <a href="#close" title="Close" class="close">X</a>
+          <h2 id="header-h2-win">You Win!</h2>
+          <br>
+          <p id="winOrLose-p">
+            you saved the galaxy from the alien attack, Good Job! 
+            <br>
+            <button id="winOrLose-button">
+              Start Over
+            </button>
+          </p>
+        </div>
+      </div>
 
   </body>
 </html>
