@@ -80,9 +80,23 @@ main {
       main #myBoard-div ul li[color="black"] {
         background-color: #454B66; }
       main #myBoard-div ul li[color="yellow"] {
-        background-color: orange; }
+        background-color: orange;
+        position: relative; }
+        main #myBoard-div ul li[color="yellow"] img {
+          position: absolute;
+          top: -10px;
+          left: -12px;
+          width: 32px;
+          height: 32px; }
       main #myBoard-div ul li[alien="alien"] {
-        background-color: red; }
+        background-color: red;
+        position: relative; }
+        main #myBoard-div ul li[alien="alien"] img {
+          position: absolute;
+          top: -10px;
+          left: -12px;
+          width: 32px;
+          height: 32px; }
     main #myBoard-div ul:last-child li {
       border-bottom: solid 1px #454B66; }
     main #myBoard-div .color-black {

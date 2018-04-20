@@ -48,11 +48,28 @@ main {
 
       li[color="yellow"] {
         background-color: orange;
+        position: relative;
 
+        img {
+          position: absolute;
+          top: -10px;
+          left: -12px;
+          width: 32px;
+          height: 32px;
+        }
       }
 
       li[alien="alien"] {
         background-color: red;
+        position: relative;
+
+        img {
+          position: absolute;
+          top: -10px;
+          left: -12px;
+          width: 32px;
+          height: 32px;
+        }
       }
     }
 
