@@ -168,4 +168,9 @@ nav {
   opacity: 1;
   pointer-events: auto; }
 
+#sound {
+  margin: 0 auto;
+  display: block;
+  padding-top: 200px; }
+
 /*# sourceMappingURL=game.css.map */
