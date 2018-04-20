@@ -9,11 +9,13 @@ A tribute to the game Volfied from 1989.
 
 A player controls a marker that can move around the edges of the rectangle. The objective is to claim at least 80% of a level's area to finish the level.
 
-Player can move using the keyboard arrows and SPACE to move to the enemy area.
+Player can move using the keyboard arrows .
+
+![game Image ](assets/images/Screen-Shot-game.png)
 
 ### Functionality & MVP
 *	User can play 2-3 levels - start and pause the game.
-*	Move with the keyboard – left, right, up, down, space.
+*	Move with the keyboard – left, right, up, down.
 *	Hear Music while playing and mute music.
 *	View his score and level.
 *	In each level:
@@ -34,11 +36,9 @@ Sound controls mute, unmute.
 
 
 ### Architecture and Technologies
-*	Vanilla JavaScript for overall structure and game logic
-*	HTML5 Canvas for DOM manipulation and rendering
+*	Vanilla JavaScript for overall structure, game logic and DOM manipulation
 *	Scss for stylesheets
 *	Webpack to bundle and serve up the various scripts
-*	Downloaded [sprite](https://opengameart.org/content/complete-spaceship-game-art-pack)
 
 ###### Scripts involved in this project:
 *	`enemy.js`: this script will generate the enemies and there logic. (enemy class)
