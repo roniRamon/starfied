@@ -1,4 +1,38 @@
 html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  background-color: black;
+}
+
+body > div {
+  text-align: center;
+}
+
+.tile {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.player {
+  background-color: yellow;
+}
+
+.empty {
+  background-color: white;
+}
+
+.border {
+  background-color: blue;
+}
+
+html {
   background-color: #D5D0DC;
   background-image: url('../assets/images/backgrounds/chaosof2012.jpg');
   background-repeat:no-repeat;
