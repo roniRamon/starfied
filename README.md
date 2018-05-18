@@ -18,7 +18,7 @@ Player can move using the keyboard arrows . [Play the Game](https://roniramon.gi
 *	Webpack to bundle and serve up the various scripts
 
 ### Features
-*	Move with the keyboard – left, right, up, down.
+*	Move with the keyboard: left, right, up, down.
 *	Hear Music while playing and mute music.
 *	View his score and level.
 *	Enemies
