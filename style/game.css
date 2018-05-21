@@ -53,9 +53,6 @@ html {
 *, *:before, *:after {
   box-sizing: inherit; }
 
-body {
-  background-color: black; }
-
 body > div {
   text-align: center; }
 
@@ -65,20 +62,49 @@ body > div {
   display: inline-block;
   vertical-align: top; }
 
+@-webkit-keyframes underBlink {
+  0% {
+    border: 2px solid rgba(255, 255, 0, 0.3); }
+  100% {
+    border: 2px solid yellow; } }
 .player {
-  background-color: yellow; }
+  background-image: url("../assets/images/sprite/small_ships.png");
+  webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border-radius: 50%;
+  -webkit-animation: underBlink 1s infinite;
+  -moz-animation: underBlink 1s infinite;
+  -o-animation: underBlink 1s infinite;
+  animation: underBlink 1s infinite; }
 
 .empty {
-  background-color: white; }
+  background-image: url("../assets/images/sprite/vol.jpg");
+  webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
 
 .border {
-  background-color: blue; }
+  background-image: url("../assets/images/sprite/computer.png");
+  webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
 
 .enemy {
-  background-color: red; }
+  background: url("../assets/images/sprite/Jse_eye_bg.gif"), url("../assets/images/sprite/vol.jpg");
+  webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
 
 .safe {
   background-color: green; }
+
+.trail {
+  background-color: black; }
 
 html {
   background-color: #D5D0DC;
@@ -99,7 +125,11 @@ main {
     width: 800px;
     height: 500px;
     margin: 0 auto;
-    background: #DDDDDD; }
+    background-image: url("../assets/images/sprite/computer.png");
+    webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
     main #myBoard-div ul {
       display: flex;
       flex-direction: row;
