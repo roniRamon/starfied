@@ -12,7 +12,7 @@ Player can move using the keyboard arrows . [Play the Game](https://roniramon.gi
 
 ![game Image ](assets/images/Screen-Shot-game.png)
 
-### Technologies
+## Technologies
 *	Vanilla JavaScript for overall structure, game logic and DOM manipulation
 *	Scss for stylesheets
 *	Webpack to bundle and serve up the various scripts
