@@ -42,6 +42,17 @@ nav {
 	transition: opacity 400ms ease-in;
 	pointer-events: none;
 
+  button {
+    border: 1px solid $gray;
+    border-radius: 5px;
+    padding: 7px 7px 5px 5px;
+    background-color: $light-blue;
+
+  }
+  button:hover {
+  background-color: $gray;
+  }
+
   div {
   	width: 500px;
   	position: relative;
