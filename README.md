@@ -12,13 +12,13 @@ Player can move using the keyboard arrows . [Play the Game](https://roniramon.gi
 
 ![game Image ](assets/images/Screen-Shot-game.png)
 
-### Technologies
+## Technologies
 *	Vanilla JavaScript for overall structure, game logic and DOM manipulation
 *	Scss for stylesheets
 *	Webpack to bundle and serve up the various scripts
 
 ### Features
-*	Move with the keyboard – left, right, up, down.
+*	Move with the keyboard: left, right, up, down.
 *	Hear Music while playing and mute music.
 *	View his score and level.
 *	Enemies
