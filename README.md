@@ -106,10 +106,8 @@ alienMove() {
 ```
 
 
-
-
 #### Bonus features
-* item to improve abilities, ex shooting
+* Item to improve abilities, ex shooting
 * Add more levels.
 * Add shooting for enemies and player.
 * Improve graphics and add different sound in each level.  

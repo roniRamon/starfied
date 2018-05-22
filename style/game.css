@@ -48,66 +48,101 @@ input[type="submit"] {
   clear: both; }
 
 html {
-  background-color: #D5D0DC;
+  box-sizing: border-box;
+  background-color: black;
   background-image: url("../assets/images/backgrounds/chaosof2012.jpg");
   background-repeat: no-repeat;
-  background-size: 100vw 100vh;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
   font-family: 'Do Hyeon', sans-serif; }
 
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body > div {
+  text-align: center; }
+
+.tile {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  vertical-align: top; }
+
+@-webkit-keyframes underBlink {
+  0% {
+    border: 2px solid rgba(255, 255, 0, 0.3); }
+  100% {
+    border: 2px solid yellow; } }
+.player {
+  background: white url("../assets/images/sprite/small_ships.png");
+  webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border-radius: 50%;
+  -webkit-animation: underBlink 1s infinite;
+  -moz-animation: underBlink 1s infinite;
+  -o-animation: underBlink 1s infinite;
+  animation: underBlink 1s infinite; }
+
+.empty {
+  background: white url("../assets/images/sprite/computer2.png");
+  webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.border {
+  webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.enemy {
+  background: url("../assets/images/sprite/Jse_eye_bg.gif"), white url("../assets/images/sprite/computer2.png");
+  webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.small-enemy {
+  background: url("../assets/images/alien/eyebot.png"), white url("../assets/images/sprite/computer2.png");
+  webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.safe {
+  background-color: green; }
+
+.trail {
+  background-color: black; }
+
 main {
-  width: 80%;
-  margin: 0 auto; }
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box; }
   main h1 {
     text-align: center;
     font-size: 30px; }
   main #myBoard-div {
-    display: flex;
-    flex-direction: column;
-    width: 800px;
-    height: 500px;
+    width: 100%;
+    height: 80%;
     margin: 0 auto;
-    background: #DDDDDD; }
-    main #myBoard-div ul {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      height: 100%; }
-      main #myBoard-div ul li {
-        width: 100%;
-        height: 100%; }
-      main #myBoard-div ul li:last-child {
-        border-right: solid 1px #454B66; }
-      main #myBoard-div ul li[color="black"] {
-        background-color: #454B66; }
-      main #myBoard-div ul li[color="yellow"] {
-        background-color: orange;
-        position: relative; }
-        main #myBoard-div ul li[color="yellow"] img {
-          position: absolute;
-          top: -10px;
-          left: -12px;
-          width: 32px;
-          height: 32px; }
-      main #myBoard-div ul li[alien="alien"] {
-        background-color: red;
-        position: relative; }
-        main #myBoard-div ul li[alien="alien"] img {
-          position: absolute;
-          top: -10px;
-          left: -12px;
-          width: 32px;
-          height: 32px; }
-    main #myBoard-div ul:last-child li {
-      border-bottom: solid 1px #454B66; }
-    main #myBoard-div .color-black {
-      background-color: #454B66; }
+    background: white url("../assets/images/sprite/computer.png");
+    webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    box-sizing: border-box; }
 
 #points-div {
   color: white;
   font-size: 18px;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
-  margin-left: 250px; }
+  margin-left: 50px; }
 
 nav {
   background-color: black;
@@ -139,6 +174,13 @@ nav {
   opacity: 0;
   transition: opacity 400ms ease-in;
   pointer-events: none; }
+  .rules button, .winOrLose button, .win button {
+    border: 1px solid #C9CACB;
+    border-radius: 5px;
+    padding: 7px 7px 5px 5px;
+    background-color: #B3C5D7; }
+  .rules button:hover, .winOrLose button:hover, .win button:hover {
+    background-color: #C9CACB; }
   .rules div, .winOrLose div, .win div {
     width: 500px;
     position: relative;

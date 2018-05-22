@@ -24,18 +24,20 @@
     </nav>
     <main>
       <p id="points-div">
-        Score: 0%
+        Score: 0.00%
+        <br/>
+        Life:
       </p>
       <div id="grid">
       </div>
 
 
     </main>
-    <audio controls id="sound"
+    <!-- <audio controls id="sound"
       src="assets/sound/Volfied - 1989.mp3"
       autoplay>
       Your browser does not support the <code>audio</code> element.
-    </audio>
+    </audio> -->
     <div id="rules" class="rules">
     	<div>
     		<a href="#close" title="Close" class="close">X</a>
@@ -49,6 +51,10 @@
           Player can move using the keyboard arrows.<br><br>
           <img src="assets/images/Keyboard_White_Arrows.png" />
         </p>
+        <br/><br/>
+        <button id="start1">
+          Start Game
+        </button>
     	</div>
     </div>
 
@@ -60,7 +66,7 @@
       		<p id="winOrLose-p">
             You Lose!
             <br>
-            <button id="winOrLose-button">
+            <button id="over2" class="start-over">
               Start Over
             </button>
           </p>
@@ -75,7 +81,7 @@
           <p id="winOrLose-p">
             you saved the galaxy from the alien attack, Good Job!
             <br>
-            <button id="winOrLose-button">
+            <button id="over" class="start-over">
               Start Over
             </button>
           </p>
