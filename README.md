@@ -10,7 +10,7 @@ A player controls a marker that can move around the edges of the rectangle. The 
 
 Player can move using the keyboard arrows . [Play the Game](https://roniramon.github.io/starfied/)
 
-![game Image ](assets/images/Screen-Shot-game.png)
+![game Image ](assets/images/Screen Shot-game2.png)
 
 ## Technologies
 *	Vanilla JavaScript for overall structure, game logic and DOM manipulation
@@ -25,20 +25,17 @@ Player can move using the keyboard arrows . [Play the Game](https://roniramon.gi
 *	The page has the rules of the game
 
 ### Collision detection
-For implementing the collision the function `checkCollisions` checks the move attributes to find if the move position is on the player path before the player reach the safe area or if the position of the move and the player are the same.    
+For implementing the collision the function `collision` checks the move position in the player and enemy class and change the state of the board class if found collision.    
 
 ``` javascript
+//Player Class and Enemy Class
+collision (){
+  this.board.collision();
+}
 
-checkCollisions(move){
-  if(move.getAttribute('color') === 'black' &&
-    (!move.hasAttribute('border'))
-  ){
-    return true;
-  }
-  if(move.getAttribute('color') === 'yellow'){
-    return true;
-  }
-  return false;
+//board class
+collision (){
+  this.collisions = true;
 }
 
 ```
@@ -46,62 +43,55 @@ checkCollisions(move){
 ### Flood fill Algorithm
 
 When the player claims an area the area changes color to the color of the boarder and becomes a safe area for the player.
-To implement the change on a specific area, the function checks for connection to the start node through colors and if a connection exist the color of the node changes.
+To implement the change on a specific area, the function checks for connection to the start position through values in the grid and if a connection exist the color of the position changes.
 
 ``` javascript
 
-floodFillArea(node, targetColor, replacementColor) {
-  if (targetColor === replacementColor) return;
-  if (node.getAttribute('color') !== targetColor ) return;
+flood (coords){
+  let coordsVal = this.getCellAt(coords);
+  if (coordsVal === "1") return;
 
-  node.setAttribute('border', true);
-  node.setAttribute('color', replacementColor);
+  this.setCellAt(coords, "1");
   this.points += 1;
 
-   let [row, col] = this.getColAndRowFromLi(node);
-   let nodes = [];
-   nodes.push(document.getElementById(`row-${row}-col-${col+1}`));
-   nodes.push(document.getElementById(`row-${row}-col-${col-1}`));
-   nodes.push(document.getElementById(`row-${row+1}-col-${col}`));
-   nodes.push(document.getElementById(`row-${row-1}-col-${col}`));
-
-
-   nodes.forEach( nodeEl => (
-     this.floodFillArea(nodeEl, targetColor, replacementColor)
-   ));
+  let diff = [[0,1], [0,-1], [-1,0], [1,0]];
+  diff.forEach( options => {
+    let newCoords = [coords[0] + options[0], coords[1] + options[1]];
+    this.flood(newCoords);
+  });
   return;
 }
 
 ```
 
-### Alien movement
+### Enemy movement
 
-The movement of the alien is determined by a random selection from an array of possible movements. if the selected position is on the game outline the move position will change.
+The movement of the enemy is determined by a random selection from an array of possible movements. if the selected position is on the game outline the move position will change.
 
 ``` javascript
 
-alienMove() {
-  let arrOfMoves = this.moves();
-  let alien = document.querySelectorAll('[alien="alien"]')[0];
-  let move = arrOfMoves[Math.floor(Math.random() * Math.floor(arrOfMoves.length))];
-
-   while (move.hasAttribute('border') ){
-     move = arrOfMoves[Math.floor(Math.random() * Math.floor(arrOfMoves.length))];
+moves (randomDiff){
+  let diff;
+  let moveTo;
+  try {
+    moveTo = [this.position[0] + randomDiff[0], this.position[1] + randomDiff[1]];
+  }
+  catch(err) {
+    moveTo = this.position;
   }
 
-  if (this.checkCollisions(move)){
-     this.collision = true;
-  } else {
-    alien.removeAttribute('alien');
-    alien.setAttribute("color", "white");
-    move.setAttribute("alien", "alien");
-    move.setAttribute("color", "red");
-    move.appendChild(alien.childNodes[0]);
-
-    this.alien = move;
-    return this.alien;
+  let moveVal = this.board.getCellAt(moveTo);
+  while(moveVal === "1" || !this.board.validMove(moveTo)) {
+    try {
+      diff = this.random_move();
+      moveTo = [this.position[0] + diff[0], this.position[1] + diff[1]];
+    }
+    catch(err) {
+      moveTo = this.position;
+    }
+    moveVal = this.board.getCellAt(moveTo);
   }
-}
+
 
 ```
 
