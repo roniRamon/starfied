@@ -10,7 +10,7 @@ A player controls a marker that can move around the edges of the rectangle. The 
 
 Player can move using the keyboard arrows . [Play the Game](https://roniramon.github.io/starfied/)
 
-![game Image ](assets/images/Screen Shot-game2.png)
+![game Image ](assets/images/Screen-Shot-game2.png)
 
 ## Technologies
 *	Vanilla JavaScript for overall structure, game logic and DOM manipulation
