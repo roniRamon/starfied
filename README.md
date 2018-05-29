@@ -64,6 +64,7 @@ flood (coords){
 
 ```
 
+
 ### Enemy movement
 
 The movement of the enemy is determined by a random selection from an array of possible movements. if the selected position is on the game outline the move position will change.
