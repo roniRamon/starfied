@@ -113,7 +113,7 @@ body > div {
   -o-background-size: cover;
   background-size: cover; }
 
-.small-enemy {
+.smalenemy {
   background: url("../assets/images/alien/eyebot.png"), white url("../assets/images/sprite/computer2.png");
   webkit-background-size: cover;
   -moz-background-size: cover;
